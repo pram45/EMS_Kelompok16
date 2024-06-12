@@ -1,5 +1,5 @@
 CREATE TABLE tbl_employees (
-	id int PRIMARY KEY,
+	id int PRIMARY KEY CHECK (ID BETWEEN 100000 AND 999999),
 	first_name varchar (25),
 	last_name varchar (25) NULL,
 	gender varchar (10) CHECK (gender IN ('Male', 'Female')),
@@ -39,3 +39,4 @@ CREATE TABLE tbl_permissions (
 	id int PRIMARY KEY,
 	name varchar (100)
 );
+
