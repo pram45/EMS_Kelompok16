@@ -1,5 +1,5 @@
 CREATE TABLE tbl_employees (
-	id int (6) PRIMARY KEY,
+	id int PRIMARY KEY,
 	first_name varchar (25),
 	last_name varchar (25) NULL,
 	gender varchar (10) CHECK (gender IN ('Male', 'Female')),
@@ -10,7 +10,7 @@ CREATE TABLE tbl_employees (
 );
 
 CREATE TABLE tbl_accounts (
-	id int (6) PRIMARY KEY,
+	id int PRIMARY KEY,
 	username varchar (25) NULL,
 	password varchar (255),
 	otp int,
@@ -19,23 +19,23 @@ CREATE TABLE tbl_accounts (
 );
 
 CREATE TABLE tbl_account_roles (
-	id int (6) PRIMARY KEY,
-	account int (6),
-	role int (1)
+	id int PRIMARY KEY,
+	account int,
+	role int
 );
 
 CREATE TABLE tbl_roles (
-	id int (1) PRIMARY KEY,
+	id int PRIMARY KEY,
 	name varchar (50)
 );
 
 CREATE TABLE tbl_role_permissions (
-	id int (6) PRIMARY KEY,
-	role int (1),
-	permissions int (1)
+	id int PRIMARY KEY,
+	role int,
+	permission int
 );
 
 CREATE TABLE tbl_permissions (
-	id int (1) PRIMARY KEY,
+	id int PRIMARY KEY,
 	name varchar (100)
 );
