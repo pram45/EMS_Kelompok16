@@ -22,18 +22,18 @@ CREATE TABLE tbl_accounts (
 );
 
 CREATE TABLE tbl_account_roles (
-	id int PRIMARY KEY,
+	id int IDENTITY (1,1) PRIMARY KEY,
 	account int,
 	role int
 );
 
 CREATE TABLE tbl_roles (
-	id int PRIMARY KEY,
+	id int IDENTITY (1,1) PRIMARY KEY,
 	name varchar (50)
 );
 
 CREATE TABLE tbl_role_permissions (
-	id int PRIMARY KEY,
+	id int IDENTITY (1,1) PRIMARY KEY,
 	role int,
 	permission int
 );
