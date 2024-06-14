@@ -7,6 +7,9 @@ CREATE TABLE tbl_employees (
 	phone varchar (20) NULL,
 	hire_date date,
 	salary int NULL
+	manager int, 
+	job varchar (10) NOT NULL, 
+	department int NOT NULL
 );
 
 CREATE TABLE tbl_accounts (
