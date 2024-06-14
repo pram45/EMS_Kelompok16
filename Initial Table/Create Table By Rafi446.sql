@@ -33,13 +33,13 @@ CREATE TABLE tbl_roles (
 );
 
 CREATE TABLE tbl_role_permissions (
-	id int IDENTITY (1,1) PRIMARY KEY,
+	id int PRIMARY KEY,
 	role int,
 	permission int
 );
 
 CREATE TABLE tbl_permissions (
-	id int PRIMARY KEY,
+	id int IDENTITY (1,1) PRIMARY KEY,
 	name varchar (100)
 );
 
