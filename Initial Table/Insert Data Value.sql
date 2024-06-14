@@ -1,4 +1,11 @@
-﻿INSERT INTO tbl_regions ( name ) 
+﻿------------------------------------
+-- AUTHOR	: pram45
+-- DATE		: 14-06-2024
+-- DESCRIPT	: memasukan data ke table
+------------------------------------
+
+
+INSERT INTO tbl_regions ( name ) 
 VALUES ('ASIA'), ('AUSTRALIA'), ('AFRICA'), ('EUROPA'), ('NORTH AMERICA'), ('SOUTH AMERICA')
 
 SELECT * FROM tbl_regions
@@ -33,4 +40,32 @@ VALUES
 ('R. Dr. José Pereira do Nascimento 13', '741283', 'Luanda', 'Luanda', 'AGO') -- Angola
 
 SELECT * FROM tbl_locations
+
+INSERT INTO tbl_departments (name, location) VALUES ('Human Resources',22), ('Marketing',23), ('Customer Service', 28), ('Production', 30), 
+('Research and Development', 29), ('Quality Assurance', 31), ('Human Resources', 32), ('Marketing', 33), ('Finance', 34), ('Sales', 35), ('Information Technology', 36),
+('Finance',24),('Sales',25),('Information Technology',26),('Operations',27)
+
+SELECT * FROM tbl_departments
+
+INSERT INTO tbl_jobs (id,title, min_salary, max_salary) VALUES ('HRM','HR Manager',3500000,10000000),
+('MS','Marketing Specialist',2500000,10000000),
+('FA','Financial Analyst',2500000,10000000),
+('SR','Sales Representative',4000000,10000000),
+('ITS','IT Specialist',2500000,10000000),
+('OM','Operations Manager',3000000,10000000),
+('CSR','Customer Service Representative',2500000,10000000),
+('RDE','R&D Engineer',2500000,10000000),
+('PS','Production Supervisor',2500000,10000000),
+('QAA','QA Analyst',2500000,10000000),
+('HRC','HR Coordinator',3500000,10000000),
+('MM','Marketing Manager',2500000,10000000),
+('FM','Finance Manager',2500000,10000000),
+('SM','Sales Manager',2500000,10000000),
+('ITM','IT Manager',4000000,10000000)
+
+SELECT * FROM tbl_jobs
+
+
+
+
 

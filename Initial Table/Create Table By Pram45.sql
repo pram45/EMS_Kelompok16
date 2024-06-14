@@ -27,7 +27,7 @@ CREATE TABLE tbl_locations(
 );
 
 CREATE TABLE tbl_departments(
-	id int PRIMARY KEY NOT NULL,
+	id int IDENTITY PRIMARY KEY NOT NULL,
 	[name] varchar(30) NOT NULL,
 	[location] int NOT NULL,
 	FOREIGN KEY (location) REFERENCES tbl_locations(id)
