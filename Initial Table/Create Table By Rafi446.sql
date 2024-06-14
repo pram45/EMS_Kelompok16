@@ -3,7 +3,7 @@ CREATE TABLE tbl_employees (
 	first_name varchar (25),
 	last_name varchar (25) NULL,
 	gender varchar (10) CHECK (gender IN ('Male', 'Female')),
-	email varchar (25),
+	email varchar (25) UNIQUE,
 	phone varchar (20) NULL,
 	hire_date date,
 	salary int NULL
