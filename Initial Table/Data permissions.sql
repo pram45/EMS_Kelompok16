@@ -31,4 +31,5 @@ INSERT INTO tbl_permissions (name) VALUES
 ('add permission'),
 ('update permission'),
 ('delete permission'),
-('view permission');
+('view permission'),
+('change passsword');
