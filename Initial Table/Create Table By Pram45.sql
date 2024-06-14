@@ -72,12 +72,13 @@ CREATE TABLE tbl_employees (
 
 
 CREATE TABLE tbl_job_histories(
-	employee int PRIMARY KEY NOT NULL,
-	[start_date] DATE,
+	employee int NOT NULL,
+	[start_date] DATE NOT NULL,
 	end_date DATE NULL,
 	[status] varchar(10) NOT NULL,
 	job varchar(10) NOT NULL,
 	department int NOT NULL,
+	PRIMARY KEY (employee, [start_date]),
 	FOREIGN KEY (job) REFERENCES tbl_jobs(id),
 	FOREIGN KEY (department) REFERENCES tbl_departments(id),
 	FOREIGN KEY (employee) REFERENCES tbl_employees(id),

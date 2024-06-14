@@ -1,7 +1,7 @@
 ﻿------------------------------------
 -- AUTHOR	: pram45
 -- DATE		: 14-06-2024
--- DESCRIPT	: memasukan data ke table
+-- DESCRIPT	: memasukan data ke table regions, countries, locations, departments, jobs
 ------------------------------------
 
 
@@ -64,6 +64,37 @@ INSERT INTO tbl_jobs (id,title, min_salary, max_salary) VALUES ('HRM','HR Manage
 ('ITM','IT Manager',4000000,10000000)
 
 SELECT * FROM tbl_jobs
+
+
+INSERT INTO tbl_job_histories (employee, [start_date], end_date, [status], job, department) 
+VALUES (100001, '5/25/2022', null, 'active', 'CSR',1),(100002, '4/15/2020', null, 'active', 'FA',2),
+(100003, '11/6/2019', null, 'active', 'FM',3),
+(100004, '5/7/2019', null, 'paid leave', 'HRC',4),
+(100005, '6/1/2020', null, 'active', 'HRM',5),
+(100006, '11/12/2021', null, 'active', 'ITM',6),
+(100007, '8/14/2021', null, 'paid leave', 'ITS',7),
+(100008, '7/3/2019', null, 'active', 'MM',8),
+(100009, '4/8/2022', null, 'active', 'MS',9),
+(100010, '10/4/2021', null, 'active', 'OM',10),
+(100011, '1/7/2020', null, 'active', 'PS',11),
+(100012, '3/6/2019', null, 'paid leave', 'QAA',12),
+(100013, '12/12/2019', null, 'active', 'RDE',13),
+(100014, '11/12/2019', '4/4/2024', 'resign', 'SM',14),
+(100015, '11/24/2019', null, 'active', 'SR',15);
+
+SELECT * FROM tbl_job_histories
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
