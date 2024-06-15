@@ -1,4 +1,4 @@
-INSERT INTO tbl_role_permissions (id, role, permission) VALUES
+INSERT INTO tbl_role_permissions (role, permission) VALUES
 (1, 1),
 (1, 2),
 (1, 3),
