@@ -1,4 +1,4 @@
-INSERT INTO tbl_account_roles (id, accounts, role) VALUES
+INSERT INTO tbl_account_roles (id, account, role) VALUES
 (1, 100001, 3),
 (2, 100002, 3),
 (3, 100003, 3),

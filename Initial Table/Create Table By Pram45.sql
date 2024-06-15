@@ -91,12 +91,12 @@ CREATE TABLE tbl_job_histories(
 -------------------------------
 
 CREATE TABLE tbl_permissions(
-	id int PRIMARY KEY,
+	id int IDENTITY (1,1) PRIMARY KEY,
 	name varchar(100) NOT NULL
 );
 
 CREATE TABLE tbl_roles(
-	id int PRIMARY KEY,
+	id int IDENTITY (1,1) PRIMARY KEY,
 	name VARCHAR(50)
 );
 
@@ -108,13 +108,13 @@ CREATE TABLE tbl_role_permissions(
 	FOREIGN KEY (permission) REFERENCES tbl_permissions(id)
 );
 
-CREATE TABLE tbl_accounts(
-	id int IDENTITY(100000,1) PRIMARY KEY CHECK (ID BETWEEN 100000 AND 999999), -- PK, FK
-	username varchar(25),
-	password varchar(255) NOT NULL,
-	otp int NOT NULL,
-	is_expired datetime NOT NULL,
-	is_used bit NOT NULL,
+CREATE TABLE tbl_accounts (
+	id int PRIMARY KEY,
+	username varchar (25) NULL,
+	password varchar (255),
+	otp int,
+	is_expired date,
+	is_used bit -- 1 for active and 0 for expired          
 	FOREIGN KEY (id) REFERENCES tbl_employees(id)
 );
 

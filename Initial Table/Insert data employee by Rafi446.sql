@@ -27,5 +27,13 @@ INSERT INTO tbl_employees
 ('rio', '', 'Male', 'rio78@gmail.com', '098344879', '2020-03-12', '3400000', '100004', 'SR', '15');
 
 
-SELECT * FROM tbl_employees
+SELECT tbl_employees.* , tbl_jobs.title, tbl_job_histories.*
+FROM tbl_employees
+JOIN tbl_jobs ON tbl_employees.job = tbl_jobs.id
+JOIN tbl_job_histories ON tbl_employees.id = tbl_job_histories.employee
 
+SELECT tbl_accounts.*, tbl_account_roles.*, tbl_roles.name, tbl_role_permissions.permission
+FROM tbl_accounts
+JOIN tbl_account_roles ON tbl_accounts.id = tbl_account_roles.account
+JOIN tbl_roles ON tbl_account_roles.role = tbl_roles.id
+JOIN tbl_role_permissions ON tbl_roles.id = tbl_role_permissions.role
