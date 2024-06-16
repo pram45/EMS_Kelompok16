@@ -1,4 +1,5 @@
 INSERT INTO tbl_account_roles (account, role) VALUES
+(100000, 3),
 (100001, 3),
 (100002, 3),
 (100003, 3),
@@ -12,5 +13,4 @@ INSERT INTO tbl_account_roles (account, role) VALUES
 (100011, 4),
 (100012, 4),
 (100013, 4),
-(100014, 4),
-(100015, 4);
+(100014, 4);
