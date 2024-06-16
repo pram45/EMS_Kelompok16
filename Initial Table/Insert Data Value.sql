@@ -41,9 +41,14 @@ VALUES
 
 SELECT * FROM tbl_locations
 
-INSERT INTO tbl_departments (name, location) VALUES ('Human Resources',22), ('Marketing',23), ('Customer Service', 28), ('Production', 30), 
-('Research and Development', 29), ('Quality Assurance', 31), ('Human Resources', 32), ('Marketing', 33), ('Finance', 34), ('Sales', 35), ('Information Technology', 36),
-('Finance',24),('Sales',25),('Information Technology',26),('Operations',27)
+INSERT INTO tbl_departments (name, location) VALUES 
+('Human Resources',1), ('Marketing',2), 
+('Customer Service', 3), ('Production', 4), 
+('Research and Development', 5), ('Quality Assurance', 6), 
+('Human Resources', 7), ('Marketing', 8), ('Finance', 9), 
+('Sales', 10), ('Information Technology', 11),
+('Finance',12),('Sales',13),('Information Technology',14),
+('Operations',15)
 
 SELECT * FROM tbl_departments
 
