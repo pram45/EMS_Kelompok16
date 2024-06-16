@@ -1,4 +1,4 @@
-CREATE FUNCTION fn_CheckPasswordPolicy(@AccountID INT)
+CREATE FUNCTION CheckPasswordPolicy(@AccountID INT)
 RETURNS NVARCHAR(50)
 AS
 BEGIN
@@ -17,12 +17,16 @@ BEGIN
     END
 	ELSE IF NOT @Password LIKE '%[A-Z]%'
 	BEGIN 
-		SET @Result = 'Password harus memiliki setidaknya 1 huruf besar.';
+		SET @Result = 'Password harus memiliki setidaknya 1 huruf kapital.';
 	END
     ELSE IF NOT @Password LIKE '%[a-z]%'
     BEGIN
         SET @Result = 'Password harus memiliki setidaknya 1 huruf.';
     END
+	ELSE IF NOT @Password LIKE '%[!-~]%'
+	BEGIN
+		SET @Result = 'Password harus memiliki setidaknya 1 simbol'
+		END
     ELSE
     BEGIN
         SET @Result = 'Password memenuhi kebijakan.';
@@ -30,3 +34,5 @@ BEGIN
 
     RETURN @Result;
 END;
+
+SELECT dbo.CheckPasswordPolicy (100005)
