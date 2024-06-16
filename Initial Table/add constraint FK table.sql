@@ -21,4 +21,4 @@ FOREIGN KEY (role) REFERENCES tbl_roles (id);
 -- FK_permissions_from_tbl_permissions
 ALTER TABLE tbl_role_permissions
 ADD CONSTRAINT FK_permission_from_tbl_permissions_id
-FOREIGN KEY (role) REFERENCES tbl_permissions (id);
+FOREIGN KEY (permission) REFERENCES tbl_permissions (id);
