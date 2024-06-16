@@ -6,7 +6,7 @@ CREATE TABLE tbl_employees (
 	email varchar (25) UNIQUE,
 	phone varchar (20) NULL,
 	hire_date date,
-	salary int NULL
+	salary int NULL,
 	manager int, 
 	job varchar (10) NOT NULL, 
 	department int NOT NULL
