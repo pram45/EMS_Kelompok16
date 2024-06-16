@@ -2,10 +2,10 @@ CREATE FUNCTION dbo.CheckPasswordMatch(
     @username VARCHAR(255),
     @password VARCHAR(255)
 )
-RETURNS BIT
+RETURNS VARCHAR(20)
 AS
 BEGIN
-    DECLARE @isMatch BIT;
+    DECLARE @result VARCHAR(20);
     
     -- Cek kecocokan username dan password
     IF EXISTS (
@@ -14,16 +14,16 @@ BEGIN
         WHERE username = @username AND password = @password
     )
     BEGIN
-        SET @isMatch = 1;
+        SET @result = 'match';
     END
     ELSE
     BEGIN
-        SET @isMatch = 0;
+        SET @result = 'tidak match';
     END
 
-    RETURN @isMatch;
+    RETURN @result;
 END;
 
-SELECT dbo.CheckPasswordMatch('rafi', 'rfiKl@123') AS IsMatch;
+SELECT dbo.CheckPasswordMatch('rafi', 'rfiKl@123') AS PasswordCheckResult;
 
-SELECT dbo.CheckPasswordMatch('rafi', 'rfiKl@1234') AS IsMatch;
+SELECT dbo.CheckPasswordMatch('rafi', 'rfiKl@1234') AS PasswordCheckResult;
