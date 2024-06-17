@@ -12,7 +12,7 @@ BEGIN
     SELECT 
         @employeeId = inserted.id,
         @hireDate = inserted.hire_date,
-        @status = 'active',
+        @status = 'hand over',
         @job = inserted.job,
         @department = inserted.department
     FROM 
