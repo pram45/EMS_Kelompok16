@@ -15,7 +15,7 @@ CREATE PROCEDURE sp_InsertEmployee
     @gender VARCHAR(10),
     @email VARCHAR(25),
     @phone VARCHAR(20),
-    @hire_date INT,
+    @hire_date DATE,
     @salary INT,
     @manager INT,
     @job VARCHAR(10),
